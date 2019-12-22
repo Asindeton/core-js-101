@@ -27,8 +27,15 @@
  *  21 => 'Fizz'
  *
  */
-function getFizzBuzz(/* num */) {
-  throw new Error('Not implemented');
+function getFizzBuzz(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'FizzBuzz';
+  } if (num % 3 === 0) {
+    return 'Fizz';
+  } if (num % 5 === 0) {
+    return 'Buzz';
+  }
+  return num;
 }
 
 
@@ -43,8 +50,13 @@ function getFizzBuzz(/* num */) {
  *   5  => 120
  *   10 => 3628800
  */
-function getFactorial(/* n */) {
-  throw new Error('Not implemented');
+function getFactorial(n) {
+  let answer = 1;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 1; i < n + 1; ++i) {
+    answer *= i;
+  }
+  return answer;
 }
 
 
@@ -60,8 +72,13 @@ function getFactorial(/* n */) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(/* n1, n2 */) {
-  throw new Error('Not implemented');
+function getSumBetweenNumbers(n1, n2) {
+  let answer = n1;
+  // eslint-disable-next-line no-plusplus
+  for (let i = n1 + 1; i < n2 + 1; i++) {
+    answer += i;
+  }
+  return answer;
 }
 
 
@@ -80,8 +97,11 @@ function getSumBetweenNumbers(/* n1, n2 */) {
  *   10,1,1   =>  false
  *   10,10,10 =>  true
  */
-function isTriangle(/* a, b, c */) {
-  throw new Error('Not implemented');
+function isTriangle(a, b, c) {
+  if (a + b > c && a + c > b && c + b > a) {
+    return true;
+  }
+  return false;
 }
 
 
@@ -208,8 +228,8 @@ function getIntervalString(/* a, b, isStartIncluded, isEndIncluded */) {
  * 'rotator' => 'rotator'
  * 'noon' => 'noon'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
 
 
@@ -225,8 +245,8 @@ function reverseString(/* str */) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(/* num */) {
-  throw new Error('Not implemented');
+function reverseInteger(num) {
+  return num.toString().split('').reverse().join('');
 }
 
 
@@ -286,7 +306,7 @@ function getDigitalRoot(/* num */) {
  *   '' => true
  *   '[]'  => true
  *   '{}'  => true
- *   '()   => true
+ *   '()'   => true
  *   '[[]' => false
  *   ']['  => false
  *   '[[][][[]]]' => true
@@ -294,7 +314,44 @@ function getDigitalRoot(/* num */) {
  *   '{)' = false
  *   '{[(<{[]}>)]}' = true
  */
+// eslint-disable-next-line consistent-return
 function isBracketsBalanced(/* str */) {
+/*   const arrayStr = str.split('');
+  let q = 0;
+  let w = 0;
+  let e = 0;
+  let r = 0;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < arrayStr.length; ++i) {
+    if (arrayStr[i] === '[') {
+      // eslint-disable-next-line no-plusplus
+      q += 1;
+    } else if (arrayStr[i] === ']') {
+      // eslint-disable-next-line no-plusplus
+      q -= 1;
+    } else if (arrayStr[i] === '(') {
+      // eslint-disable-next-line no-plusplus
+      w += 1;
+    } else if (arrayStr[i] === ')') {
+      // eslint-disable-next-line no-plusplus
+      w -= 1;
+    } else if (arrayStr[i] === '{') {
+      // eslint-disable-next-line no-plusplus
+      e += 1;
+    } else if (arrayStr[i] === '}') {
+      // eslint-disable-next-line no-plusplus
+      e -= 1;
+    } else if (arrayStr[i] === '<') {
+      // eslint-disable-next-line no-plusplus
+      r += 1;
+    } else if (arrayStr[i] === '>') {
+      // eslint-disable-next-line no-plusplus
+      r -= 1;
+    }
+  }
+  console.log(q, w, e, r);
+  if (q === 0 && w === 0 && e === 0 && r === 0) return true;
+  return false; */
   throw new Error('Not implemented');
 }
 
@@ -319,8 +376,8 @@ function isBracketsBalanced(/* str */) {
  *    365, 4  => '11231'
  *    365, 10 => '365'
  */
-function toNaryString(/* num, n */) {
-  throw new Error('Not implemented');
+function toNaryString(num, n) {
+  return num.toString(n);
 }
 
 
