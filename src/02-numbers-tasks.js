@@ -7,7 +7,6 @@
  *                                                                                           *
  ******************************************************************************************* */
 
-
 /**
  * Returns an area of a rectangle given by width and heigth.
  *
@@ -22,7 +21,6 @@
 function getRectangleArea(a, b) {
   return a * b;
 }
-
 
 /**
  * Returns a circumference of circle given by radius.
@@ -71,7 +69,7 @@ function getAverage(value1, value2) {
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 function getDistanceBetweenPoints(x1, y1, x2, y2) {
-  return (((x2 - x1) ** 2 + (y2 - y1) ** 2) ** (1 / 2));
+  return ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** (1 / 2);
 }
 
 /**
@@ -88,9 +86,8 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  */
 function getLinearEquationRoot(a, b) {
   // eslint-disable-next-line no-mixed-operators
-  return -1 * b / a;
+  return (-1 * b) / a;
 }
-
 
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
@@ -111,8 +108,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  return Math.acos((x1 * x2 + y1 * y2) / (Math.sqrt(x1 ** 2 + y1 ** 2)
-  * Math.sqrt(x2 ** 2 + y2 ** 2)));
+  return Math.acos(
+    // eslint-disable-next-line comma-dangle
+    (x1 * x2 + y1 * y2) / (Math.sqrt(x1 ** 2 + y1 ** 2) * Math.sqrt(x2 ** 2 + y2 ** 2))
+  );
 }
 
 /**
@@ -130,7 +129,6 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
 function getLastDigit(e) {
   return e % 10;
 }
-
 
 /**
  * Returns a number by given string representation.
@@ -184,7 +182,7 @@ function getParallelipidedDiagonal(a, b, c) {
  */
 function roundToPowerOfTen(num, pow) {
   // eslint-disable-next-line no-mixed-operators
-  return Math.round(num / (10 ** pow)) * (10 ** pow);
+  return Math.round(num / 10 ** pow) * 10 ** pow;
 }
 
 /**

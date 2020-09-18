@@ -5,7 +5,6 @@
  *                                                                                           *
  ******************************************************************************************* */
 
-
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -21,7 +20,6 @@
 function concatenateStrings(a, b) {
   return a + b;
 }
-
 
 /**
  * Returns the length of given string.
@@ -69,7 +67,6 @@ function extractNameFromTemplate(value) {
   const length = value.split('').length - 1;
   return value.split('').slice(7, length).join('');
 }
-
 
 /**
  * Returns a first char of the given string.
@@ -150,10 +147,12 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(a) {
-  const answer = a.split('').slice(1, a.length - 1).join('');
+  const answer = a
+    .split('')
+    .slice(1, a.length - 1)
+    .join('');
   return answer;
 }
-
 
 /**
  * Converts all characters of the specified string into the upper case
@@ -222,7 +221,6 @@ function getRectangleString(width, height) {
   return result;
 }
 
-
 /**
  * Encode specified string with ROT13 cipher
  * See details:  https://en.wikipedia.org/wiki/ROT13
@@ -280,7 +278,6 @@ function isString(value) {
   return false;
 }
 
-
 /**
  * Returns playid card id.
  *
@@ -307,14 +304,63 @@ function isString(value) {
  */
 function getCardId(value) {
   // eslint-disable-next-line no-unused-vars
-  const test = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
-    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
-    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
-    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
+  const test = [
+    'A♣',
+    '2♣',
+    '3♣',
+    '4♣',
+    '5♣',
+    '6♣',
+    '7♣',
+    '8♣',
+    '9♣',
+    '10♣',
+    'J♣',
+    'Q♣',
+    'K♣',
+    'A♦',
+    '2♦',
+    '3♦',
+    '4♦',
+    '5♦',
+    '6♦',
+    '7♦',
+    '8♦',
+    '9♦',
+    '10♦',
+    'J♦',
+    'Q♦',
+    'K♦',
+    'A♥',
+    '2♥',
+    '3♥',
+    '4♥',
+    '5♥',
+    '6♥',
+    '7♥',
+    '8♥',
+    '9♥',
+    '10♥',
+    'J♥',
+    'Q♥',
+    'K♥',
+    'A♠',
+    '2♠',
+    '3♠',
+    '4♠',
+    '5♠',
+    '6♠',
+    '7♠',
+    '8♠',
+    '9♠',
+    '10♠',
+    'J♠',
+    'Q♠',
+    'K♠',
+  ];
 
   return test.indexOf(value);
 }
-
 
 module.exports = {
   concatenateStrings,
